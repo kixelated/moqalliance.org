@@ -15,6 +15,11 @@
 		"logo": "/logos/bitmovin.png"
 	},
 	{
+		"name": "CDN77",
+		"url": "https://www.cdn77.com",
+		"logo": "/logos/cdn77.svg"
+	},
+	{
 		"name": "Cisco",
 		"url": "https://cisco.com",
 		"logo": "/logos/cisco.svg"
