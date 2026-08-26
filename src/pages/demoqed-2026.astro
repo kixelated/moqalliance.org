@@ -40,7 +40,7 @@ const members = [
 	["Demuxed", "https://demuxed.com", "demuxed.png"],
 	["Fastly", "https://fastly.com", "fastly.svg"],
 	["Iroh", "https://iroh.computer", "iroh.png"],
-	["moq.pro", "https://moq.pro", "/demoqed-2026/moq-pro.svg"],
+	["moq.pro", "https://moq.pro", "https://moq.dev/layout/pro-icon.svg"],
 	["MOQtail", "https://github.com/moqtail", "moqtail.png"],
 	["Mux", "https://mux.com", "mux.svg"],
 	["Norsk", "https://norsk.video", "norsk.png"],
@@ -779,9 +779,10 @@ const socialImage = "https://moqalliance.org/demoqed-2026/social.png";
 											>
 												<img
 													class:list={{ "member-logo-large": name === "Mux" || name === "Red5" }}
-													src={logo.startsWith("/") ? logo : `/logos/${logo}`}
+													src={logo.startsWith("/") || logo.startsWith("http") ? logo : `/logos/${logo}`}
 													alt={name}
 													loading="lazy"
+													referrerpolicy="no-referrer"
 												/>
 											</a>
 										</li>
