@@ -9,7 +9,8 @@ Auto-deploys from `main` via Cloudflare Builds.
 
 ## Layout
 
-- `src/pages/` — page routes (`/`, `/get-started`, `/api/subscribe`)
+- `src/pages/` — page routes (`/`, `/get-started`, `/demoqed-2026`, `/api/subscribe`)
+- `src/worker.ts` — Astro Worker entrypoint and host routing for `demoqed.moqalliance.org`
 - `src/components/` — shared Astro components
 - `src/data/` — content data (members, talks, faqs, use cases, etc.)
 - `src/styles/global.css` — shared CSS
@@ -35,3 +36,8 @@ Main site auto-deploys from `main`. Manual deploys:
 npm run deploy         # main site
 npm run deploy:email   # email-to-Discord worker
 ```
+
+The main Worker has custom domains for `moqalliance.org` and
+`demoqed.moqalliance.org`. The event subdomain root is internally rewritten to
+the DEMOQED page, while the old `moqalliance.org/demoqed-2026` route redirects
+to the subdomain.

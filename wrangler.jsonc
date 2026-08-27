@@ -2,10 +2,21 @@
 	"compatibility_date": "2026-05-20",
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "moqalliance-org",
-	"main": "@astrojs/cloudflare/entrypoints/server",
+	"main": "src/worker.ts",
+	"routes": [
+		{
+			"pattern": "moqalliance.org",
+			"custom_domain": true
+		},
+		{
+			"pattern": "demoqed.moqalliance.org",
+			"custom_domain": true
+		}
+	],
 	"assets": {
 		"directory": "./dist",
-		"binding": "ASSETS"
+		"binding": "ASSETS",
+		"run_worker_first": ["/", "/demoqed-2026", "/demoqed-2026/"]
 	},
 	"kv_namespaces": [
 		{

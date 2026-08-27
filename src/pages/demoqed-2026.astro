@@ -1,5 +1,5 @@
 ---
-// DEMOQED — moqalliance.org/demoqed-2026
+// DEMOQED — demoqed.moqalliance.org
 // Deliberately standalone: no global layout, no nav, no Tailwind. Just a very
 // tall stack of DE MOQ ED where the MOQ column walks the color wheel on the
 // way down.
@@ -53,8 +53,8 @@ const members = [
 const title = "DEMOQED";
 const description =
 	"DEMOQED is an afternoon about Media over QUIC. October 8, 2026 in San Francisco.";
-const pageUrl = "https://moqalliance.org/demoqed-2026";
-const socialImage = "https://moqalliance.org/demoqed-2026/social.png";
+const pageUrl = "https://demoqed.moqalliance.org/";
+const socialImage = "https://demoqed.moqalliance.org/demoqed-2026/social.png";
 ---
 
 <!doctype html>
@@ -64,6 +64,7 @@ const socialImage = "https://moqalliance.org/demoqed-2026/social.png";
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>DEMOQED — October 8 · San Francisco</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={pageUrl} />
 		<link rel="icon" type="image/png" href="/demoqed-2026/favicon.png" />
 
 		<meta property="og:type" content="website" />
