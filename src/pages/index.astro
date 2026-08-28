@@ -14,6 +14,14 @@ const description =
 	<header>
 		<Logo />
 		<h1>MoQ Alliance</h1>
+		<a class="event-notice" href="/demoqed-2026">
+			<span class="event-notice-label">[new]</span>
+			<span>
+				We're organizing a MoQ conference this October. Check out
+				<strong>DEMOQED</strong>.
+			</span>
+			<span class="event-notice-arrow" aria-hidden="true">&rarr;</span>
+		</a>
 		<p class="lede">
 			The MoQ Alliance is an industry organization dedicated to making
 			Media over QUIC (MoQ) a successful, open, and interoperable
@@ -134,4 +142,54 @@ const description =
 		</ul>
 		<p>moqalliance.org</p>
 	</footer>
+
+	<style>
+		.event-notice {
+			display: grid;
+			grid-template-columns: auto minmax(0, 1fr) auto;
+			align-items: center;
+			gap: 0.75rem;
+			box-sizing: border-box;
+			margin: 0 0 3.5rem;
+			padding: 0.65rem 0.9rem;
+			border: 1px solid var(--fg);
+			background: var(--fg);
+			color: var(--bg);
+			font-size: 0.78rem;
+			line-height: 1.4;
+			text-decoration: none;
+			transition: opacity 0.15s ease;
+		}
+
+		.event-notice:hover {
+			opacity: 0.82;
+		}
+
+		.event-notice:focus-visible {
+			outline: 2px solid var(--fg);
+			outline-offset: 3px;
+		}
+
+		.event-notice-label,
+		.event-notice strong {
+			font-weight: 600;
+		}
+
+		.event-notice strong {
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+
+		.event-notice-arrow {
+			font-size: 1rem;
+			line-height: 1;
+		}
+
+		@media (max-width: 520px) {
+			.event-notice {
+				margin-bottom: 2.75rem;
+				padding: 0.7rem 0.85rem;
+			}
+		}
+	</style>
 </Layout>
